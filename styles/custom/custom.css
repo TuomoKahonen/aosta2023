@@ -1,0 +1,192 @@
+/* Custom styles for Reader */
+
+body {
+     background-color: #ddd;
+}
+
+/***************RICHEMENTS FLASH********************/
+
+/***************RICHEMENTS FLASH********************/
+
+@keyframes myanimation {
+  0% { opacity: 0; }
+  30% { opacity: 0.0; }
+  70% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+.actionpoint
+{
+	/* max-width: 40px;
+	max-height: 40px;
+	border-radius: 20px;
+	opacity: 0.9; */
+}
+
+.actionpoint:after {
+outline: 3px solid rgba(100,150,200,.65);
+background-color: rgba(100,150,200,.65);
+}
+
+.flash:after
+{
+	animation: myanimation 1.0s !important;
+}
+
+/****************ActionBar*********************/
+.actionbar {
+    background-image:none;
+    background-color: #666;
+}
+
+/******************* POPUPS BACKDROP ****************/
+
+.modal-backdrop {
+    background-color: #000;
+    opacity:0.9;
+}
+
+.modal-body {
+    background-color: #fff;
+}
+/************** when fitted by width ************/
+
+.fit-width .modal-dialog
+{
+    width: 90%;
+    max-width: 960px;
+}
+.fit-width .actionpoint.image show-picture img
+{
+    width: 100%;
+}
+
+/***************** IMAGE POPUP *********************/
+.image .modal-content {
+    box-shadow:none;
+    border:none;
+}
+
+.carousel-caption {
+    text-shadow:none;
+    color: #333;
+}
+
+.fit-zoomable .modal-dialog
+{
+    width: 100%;
+}
+
+.fit-zoomable .imageWrapper.zoomed
+{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.fit-zoomable .imageWrapper.zoomed img
+{
+    width:1280px;
+    max-width: 200%;
+    max-height: 3000px !important;
+}
+/*************** BUTTONS *************/
+#fullscreenButton,#thumbButton {
+    display:none;
+}
+
+#subPageIndicator {
+    display:none;
+}
+
+/*****************Storybox text *******************/
+read-text {
+  height: 550px;
+  overflow:auto;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10%;
+	padding-right: 10%;
+    /* background-color: #fef8ec;
+    background-image: url('../../images/storybg.jpg');
+    background-size: 100% 100%;
+    background-repeat: repeat-y; */
+}
+read-text p {
+    font-family: "times new roman", serif;
+    font-size: 1.2em;
+
+}
+
+read-text h1 {
+    font-family: "arial", sans-serif;
+    padding-top: 10px;
+    font-size: 1.4em;
+}
+read-text h2 {
+    font-family: "arial", sans-serif;
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+read-text h3 {
+    font-family: "arial", sans-serif;
+    padding-top: 10px;
+    font-size: 1.1em;
+}
+read-text h4 {
+    font-family: "arial", sans-serif;
+    padding-top: 10px;
+    font-size: 1.0em;
+}
+
+.modal-header {
+    background-image: none;
+    background-color: #fff;
+}
+
+.modal button.close {
+    color: #f00;
+}
+
+.arrow.arrow-right {
+    top:40%;
+    bottom:40%;
+}
+.arrow.arrow-left {
+    top:40%;
+    bottom:40%;
+}
+a.image {
+	z-index: 9999;
+}
+
+
+.actionpoint.image
+{
+  z-index:999;
+}
+#nav-button
+{
+  display:none;
+}
+#disable-actions
+{
+  display:inline;
+}
+#help-button
+{
+  display:none;
+}
+#actionbar-zoomslider
+{
+  display:inline;
+}
+.arrows .arrow-left
+{
+  z-index: 10000;
+}
+.arrows .arrow-right
+{
+  z-index: 10000;
+}
