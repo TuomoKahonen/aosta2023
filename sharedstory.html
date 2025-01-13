@@ -1,0 +1,24 @@
+<!DOCTYPE html> <html> <head> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <script>$(document).ready(function(){
+          
+            const urlParams = new URLSearchParams(window.location.search);
+            const storyUid = urlParams.get('story');
+            $.get('content/ARTICLES/' + storyUid, function(data) {
+                $("#mainarticle").html(data);
+            }, 'text');
+            
+        });</script> <style>body
+        {
+            background-color: #e5eef2;
+        }
+        #mainarticle
+        {
+            max-width: 640px;
+            margin: 0 auto 0 auto;
+            background-color: #fff;
+            padding: 12px;
+            box-shadow: rgb(84, 87, 88) 5px 5px 15px;;
+        }
+        .header-logo
+        {
+            max-width:100%;
+        }</style> </head> <body> <div style="text-align:center"> <img src="content/IMAGES/header_logo.png" class="header-logo"> </div> <article id="mainarticle"> </article> </body> </html>

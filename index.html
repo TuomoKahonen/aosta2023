@@ -1,0 +1,98 @@
+<!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--> 
+<head> 
+  <meta name="description" content="Isä ja tytär Kähönen lumilautailemassa eri puolilla Aostaa 2023.">
+  <style>.scriptwrapper {
+        display: none;
+      }</style> <script>const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      var Content = ""; 
+     
+      const serviceset = urlParams.get('serviceset')
+      const issueobject = urlParams.get('issueobject')
+      // get some kind of XMLHttpRequest
+      var xhrObj = new XMLHttpRequest();
+      var scriptUrl = "Content.js";
+      if (urlParams.has('serviceset')) {
+        scriptUrl = "https://file-dev.k360.fi/v1/Files/" + serviceset + "/epaper/" + issueobject + "/Content.js";
+      }
+      // open and send a synchronous request
+      xhrObj.open('GET', scriptUrl, false);
+      xhrObj.send('');
+      // add the returned content to a newly created script tag
+      var se = document.createElement('script');
+      se.type = "text/javascript";
+      se.text = xhrObj.responseText;
+      document.getElementsByTagName('head')[0].appendChild(se);</script> <meta charset="utf-8"> <title>Aostassa 2023</title> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1minimum-scale=1"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta name="mobile-web-app-capable" content="yes"> <meta name="MobileOptimized" content="width"> <meta name="HandheldFriendly" content="true"> <meta name="msapplication-tap-highlight" content="no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="description" content=""> <link rel="license" href="LICENSE.txt"> <!-- icons --> <link rel="shortcut icon" href="favicon.ico"> <link rel="stylesheet" href="styles/vendor.25d883da.css"> <link rel="stylesheet" href="styles/main.648d3410.css"> <!-- build:css({.tmp,app}) styles/custom/custom.css --> <link rel="stylesheet" href="styles/custom/custom.css"> <link rel="stylesheet" href="customOverRides.css"> </head> <body ng-app="app" id="body"> <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <!-- Add your site or application content here --> <div class="container-fluid" ng-include="'views/main.html'"></div> <!-- Google Analytics --> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');</script> <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]--> <script src="scripts/vendor.aaaa200e.js"></script> <div id="scriptwrapper"> <script src="scripts/scripts.97a9abd8.js"></script> <!-- <script src="Content.js"></script> --> <script src="searchindex.js"></script> <!-- If there is smart configuration in content.js we will run smart scripts --> <!--smart adserver --> <script type="application/javascript">//***********************SmartAdssysem
+      function include(filename)
+      {
+         var head = document.getElementsByTagName('head')[0];
+         var script = document.createElement('script');
+         script.src = filename;
+         script.type = 'text/javascript';
+         script.async = true;
+         head.appendChild(script)
+      }
+      if (Content.smartAdsShow) {
+        var smartAdsScriptUrl = Content.smartAdsScriptUrl;
+        var smartAdsNetworkId = Content.smartAdsNetworkId;
+        var smartAdsDomain = Content.smartAdsDomain;
+        include(smartAdsScriptUrl);
+        var sas = sas || {};
+        sas.cmd = sas.cmd || [];
+        sas.cmd.push(function() {
+            sas.setup({ networkid: smartAdsNetworkId, domain: smartAdsDomain, async: true });
+        });
+      }
+
+    //*******************try to prevent safari's browser zooming
+    document.addEventListener('touchmove',
+        function(e) {
+            e.preventDefault();
+        }, {passive:false});
+
+   //******************FIAM***************************
+   if (Content.fiamStatistic) {
+    window._urq = window._urq || [];
+    window._urq.push(["setMediaId", Content.fiamMediaId]);
+    console.log("FIAMPUSH");
+
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('script');
+      script.src = "https://sak.userreport.com/kpkyhtit/launcher.js?iab_consent=BOv_CmhOv_CmhAAABBENDAiAAAAYqABAMUA";
+      script.async = true;
+      script.id="userreport-launcher-script";
+      head.appendChild(script);
+    }
+
+    //**************Blueconic**********
+    if (Content.blueConic) {
+
+       var head = document.getElementsByTagName('head')[0];
+       var script = document.createElement('script');
+       script.src = "https://cdn.blueconic.net/" + Content.blueConicFile;
+       script.async = true;
+       script.id="userreport-launcher-script";
+       head.appendChild(script);
+     }
+
+     //***************TagManager*********************
+     if (Content.tagManager) {
+       var GTMid = Content.GTMid;
+       (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer', GTMid);
+
+    }</script> </div></body> </html>

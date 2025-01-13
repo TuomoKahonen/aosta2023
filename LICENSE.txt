@@ -1,0 +1,18 @@
+/**** WARNING!!! ****
+ *
+ * Copyright (c) 2014, eDocker Digital Publishing Oy
+ *
+ * This code is property of eDocker Digital Publishing Oy. It is allowed to use
+ * it or parts of it or modify it only in projects created with eDocker CREATE!
+ * software or eDocker PUBLISH! service. Any other use is strictly prohibited.
+ * Usage of this code will be monitored worldwide and all the illegal use will
+ * cause immediate legal actions. If you have any questions about the use of
+ * this code, email your questions to support@edocker.com
+ *
+ **** WARNING!!! ****/
+
+/**
+ * Open Sans web fonts licensed under the SIL Open Font License:
+ * http://scripts.sil.org/OFL
+ *
+ **/
